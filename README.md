@@ -24,3 +24,31 @@ The repository covers:
 
 ## Repository Structure
 
+```
+
+infrastructure/
+├── ci/                 # CI/CD servers, runners, build infrastructure
+├── terraform/          # Infrastructure provisioning
+├── ansible/            # Configuration management
+├── scripts/            # Utility and bootstrap scripts
+├── docs/               # Architecture and platform documentation
+└── .env.example        # Environment variables template
+
+```
+
+## Environments
+
+Infrastructure is organized by isolated environments:
+- `dev` – development and testing
+- `staging` – pre-production validation
+- `prod` – production workloads
+
+## Security Notes
+
+- Secrets and tokens must never be committed to this repository
+- Use environment variables or external secret managers
+- `.env.example` is provided as a reference only
+
+## Ownership
+
+This repository is maintained by the DevOps / Platform team and is used for internal and client project infrastructure.
